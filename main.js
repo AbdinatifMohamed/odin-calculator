@@ -30,6 +30,9 @@ function operate(){
             result = firstnum - secondnum;
             break;
         case "multiply":
+            result = firstnum*secondnum;
+            break;
+        case "divide":
             result = firstnum/secondnum;
             break;
         case "equal":
