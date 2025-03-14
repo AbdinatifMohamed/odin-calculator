@@ -20,10 +20,15 @@ body {
     flex-direction: column;
     height: 25rem;
     width: 25rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: .5rem
 }
 
 .display {
     flex: 1;
+    background-color: cadetblue;
+    border-radius: .5rem;
 }
 
 .displaynum {
