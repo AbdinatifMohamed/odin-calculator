@@ -18,8 +18,8 @@ body {
     background-color: darkgrey;
     display: flex;
     flex-direction: column;
-    height: 50%;
-    width: 50%;
+    height: 25rem;
+    width: 25rem;
 }
 
 .display {
