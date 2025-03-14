@@ -46,6 +46,7 @@ function operate(){
 }
 
 function displayContent(text) {
+    display.textContent = "0";
     display.textContent = text;
 } 
 
@@ -58,12 +59,19 @@ function clearCalc(){
 
 numbtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-        if (firstnum !== undefined && operator === undefined) return;
         if (firstnum === undefined) {
             firstnum = Number(btn.dataset.number);
             displayContent(`${firstnum}`);
-        } else if (secondnum === undefined){
+        } else if (firstnum !== undefined && operator === undefined) {
+            firstnum = Number(`${firstnum}${btn.dataset.number}`);
+            displayContent(`${firstnum}`);
+        }
+        else if (secondnum === undefined && operator !== undefined){
             secondnum = Number(btn.dataset.number);
+            displayContent(`${secondnum}`);
+            operate();
+        } else if (secondnum !== undefined  && operator !== undefined) {
+            secondnum = Number(`${secondnum}${btn.dataset.number}`);
             displayContent(`${secondnum}`);
             operate();
         }
